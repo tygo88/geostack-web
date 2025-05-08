@@ -17,7 +17,7 @@ function CesiumViewer() {
       });
 
 
-    // 🌍 지형 로딩 완료될 때까지 기다렸다가 카메라 이동
+    // 지형 로딩 완료 후후 카메라 이동
     const removeEvent = viewer.scene.globe.tileLoadProgressEvent.addEventListener(function (remaining) {
       if (remaining === 0) {
         viewer.camera.flyTo({

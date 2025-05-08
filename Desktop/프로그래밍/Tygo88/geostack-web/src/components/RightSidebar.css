@@ -1,0 +1,125 @@
+/* === 전체 사이드바 === */
+.right-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 48px; /* 접힌 상태 너비 */
+    background-color: #f5f5f5;
+    border-left: 1px solid #ddd;
+    transition: width 0.3s ease, padding 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* === 확장 시 사이드바 폭 === */
+  .hover-zone:hover .right-sidebar {
+    width: 300px;
+  }
+  
+  /* === 메인 로고 설정 === */
+  .sidebar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    gap: 12px;           /* 아이콘과 텍스트 사이 여백 */
+    margin-bottom: 40px;
+  }
+  
+  .logo {
+    width: 33px !important;
+    height: 33px !important;
+    object-fit: contain;
+    display: block;
+  }
+
+  .brand-name {
+    font-family: 'Orbitron', sans-serif;  
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, padding 0.3s ease;
+  }
+  
+  .right-sidebar.expanded .brand-name {
+    opacity: 1;
+  }
+  
+  /* === 사이드바 아이콘 설정 === */
+  .sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;                     /* ← 아이콘 간 새로 간격 */
+    align-items: center;
+    justify-content: flex-start;   /* ← 세로 중앙 정렬 핵심 */
+    flex: 1;
+    height: 100%;             
+    padding-left: 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* === 확장 상태: 왼쪽 정렬 + 여백 === */
+  .hover-zone:hover .sidebar-buttons {
+    align-items: flex-start;
+    padding-left: 30px;
+  }
+  
+  /* === 확장 상태 상세 === */
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    justify-content: flex-start;
+    width: 250px;   
+    box-sizing: border-box;
+  }
+  
+  /* 확장 시 넓은 박스 */
+  .right-sidebar.expanded .sidebar-item {
+    width: 240px;
+    justify-content: flex-start;
+  }
+  
+  /* 접힌 상태에선 좁게 + 가운데 정렬 */
+  .right-sidebar.collapsed .sidebar-item {
+    width: 48px;
+    justify-content: center;
+  }
+  
+  /* 호버 시 배경 강조 */
+  .sidebar-item:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 선택: 약한 그림자 */
+  }
+  
+  /* === 아이콘 스타일 === */
+  .icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.85;
+  }
+  
+  /* === 텍스트 라벨 === */
+  .label {
+    font-size: 17px;
+    font-weight: 600; 
+    color: #333;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hover-zone:hover .label {
+    opacity: 1;
+  }
+  

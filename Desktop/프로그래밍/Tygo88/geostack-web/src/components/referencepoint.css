@@ -1,0 +1,57 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  min-width: 250px;  /* 너비 조절 */
+}
+
+.modal h3 {
+  margin-top: 5;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 라벨 왼쪽, input 오른쪽 */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input-group label {
+  width: 70px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 6px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.modal-buttons button {
+  padding: 6px 10px;
+  font-size: 13px;
+}

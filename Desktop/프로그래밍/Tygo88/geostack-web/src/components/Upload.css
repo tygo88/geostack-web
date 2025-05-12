@@ -1,0 +1,81 @@
+.upload-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 340px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+  
+  .upload-close-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .upload-close-button:hover {
+    color: #000;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .upload-button {
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .upload-button:hover {
+    background-color: #003a91;
+  }
+  
+  .model-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .model-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    color: #d33;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    color: #a00;
+  }
+  
